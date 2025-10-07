@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "PT Sans";
+
+    text-decoration: none;
+}
+
+body {
+    background: #E5E7EB;
+}
+
+/* Header */
+
+header {
+    padding: 24px 192px;
+
+    background: #fff;
+}
+
+header a {
+    color: black;
+}
+
+header a:hover {
+    color: #8B5CF6;
+}
+
+header a:active {
+    border-bottom: 1px dashed #8B5CF6;
+    color: #8B5CF6;
+}
+
+header .header-top {
+    align-items: center;
+
+    justify-content: space-between;
+
+    text-align: right;
+}
+
+header .botom-header {
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+/* Utility */
+
+.flex {
+    display: flex;
+
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.gap {
+    gap: 10px;
+}
+
+.big-gap {
+    gap: 24px;
+}
+
+.grid  {
+    display: grid;
+
+    grid-template-columns: 4fr 1fr;
+
+    align-items: center;
+}
+
+.separator {
+    background: #A78BFA;
+
+    height: 5rem;
+    width: 1px;
+
+    margin: 0 10px 0 10px;
+}
+
+.btn {
+    background: #8B5CF6;
+
+    border-radius: 5px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    padding: 10px 28px;
+
+    border: none;
+}
+
+.btn:hover {
+    background: hsla(263, 70%, 50%, 1);
+}
+
+.btn:active {
+    background: hsla(251, 95%, 92%, 1);
+}
+
+.marging-top--big {
+    margin-top: 72px;
+}
+
+/* Fonts */
+
+.text-XXL {
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.text-XL {
+    font-size: 24px;
+    font-weight: 300;
+}   
+
+.text-normal {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
