@@ -48,6 +48,68 @@ header .botom-header {
     align-items: center;
 }
 
+/* Hero */
+
+.main {
+    padding: 24px 192px;
+}
+
+.hero {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    justify-content: center;
+    
+    gap: 24px;
+}
+
+.hero .grid-element img {
+
+    margin-top: 16px;
+}
+
+.hero .grid-element p {
+
+    margin-top: 12px;
+}
+
+.hero .grid-element--form {
+    padding: 24px 130px;
+
+    background: #fff;
+
+    border-radius: 5px;
+}
+
+.hero .grid-element--form p {
+    margin-top: 16px;
+}
+
+.form-header {
+    text-align: center;
+}
+
+.hero .grid-element--form .form-element {
+    display: flex;
+
+    
+}
+
+.hero input {
+    border: 1px solid #000;
+
+    border-radius: 2px;
+
+    padding: 12px; 
+
+    flex-grow: 1;
+
+    
+}
+
 /* Utility */
 
 .flex {
