@@ -1,0 +1,90 @@
+@import "utility";
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: "PT Sans";
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+body {
+  background: #e5e7eb;
+
+  .main {
+    padding: 24px 192px;
+  }
+}
+
+/* Header */
+
+header {
+  padding: 24px 192px;
+
+  background: #fff;
+
+  .header-top {
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: right;
+  }
+
+  .botom-header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color: black;
+
+    &:hover {
+      color: #8b5cf6;
+    }
+
+    &:active {
+      color: #8b5cf6;
+
+      border-bottom: 1px dashed #8b5cf6;
+    }
+  }
+}
+
+/* Hero */
+
+.hero {
+  @include grid(1fr 1fr, center, center);
+
+  .grid-element {
+    img {
+      margin-top: 16px;
+    }
+
+    p {
+      margin-top: 12px;
+    }
+  }
+
+  .grid-element--form {
+    padding: 24px 130px;
+
+    background: #fff;
+
+    border-radius: 5px;
+
+    p {
+      margin-top: 16px;
+    }
+  }
+
+  input {
+    flex-grow: 1;
+
+    border: 1px solid #000;
+    border-radius: 2px;
+
+    padding: 12px;
+  }
+}
