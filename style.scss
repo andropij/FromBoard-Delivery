@@ -88,3 +88,27 @@ header {
     padding: 12px;
   }
 }
+
+/* Icons */
+
+.icons-flex {
+  @include gap(6px);
+
+  .flex {
+    align-items: center;
+
+    @include gap(6px);
+
+    .flex {
+      width: 496px;
+
+      padding: 24px;
+
+      @include gap(3px);
+
+      p {
+        max-width: 270px;
+      }
+    }
+  }
+}

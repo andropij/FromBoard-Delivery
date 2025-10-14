@@ -52,6 +52,10 @@
   margin-top: 72px;
 }
 
+.marging-top {
+  margin-top: 12px;
+}
+
 /* Fonts */
 .text-XXL {
   font-weight: 900;
@@ -66,6 +70,11 @@
 .text-normal {
   font-size: 16px;
   font-weight: 400;
+}
+
+.text-sm {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .bold {
@@ -142,4 +151,21 @@ header a:active {
   border: 1px solid #000;
   border-radius: 2px;
   padding: 12px;
+}
+
+/* Icons */
+.icons-flex {
+  gap: 24px;
+}
+.icons-flex .flex {
+  align-items: center;
+  gap: 24px;
+}
+.icons-flex .flex .flex {
+  width: 496px;
+  padding: 24px;
+  gap: 12px;
+}
+.icons-flex .flex .flex p {
+  max-width: 270px;
 }
