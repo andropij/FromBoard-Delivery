@@ -127,10 +127,50 @@ header {
   .garants-selector {
     @include gap(6px);
 
-    @include flex-box(row, center, start)
+    @include flex-box(row, center, start);
   }
 
   .btn {
     padding: 16px 24px;
+  }
+}
+
+/* slayder */
+
+.slayder {
+  padding: 0 23px;
+}
+
+.slayder-main {
+  gap: 47px;
+
+  @include flex-box(row, space-between, center);
+
+  .slayder-main--cards {
+    @include gap(6px);
+
+    overflow: hidden;
+
+    overflow-x: scroll;
+
+    scroll-snap-type: mandatory;
+
+    scrollbar-width: none;
+
+    .slayder-card {
+      scroll-snap-align: center;
+
+      min-width: 626px;
+
+      background: #fff;
+
+      border-radius: 5px;
+
+      padding: 32px 43px;
+
+      .card-botom {
+        align-items: end;
+      }
+    }
   }
 }

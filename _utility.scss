@@ -1,5 +1,5 @@
 /* Utility */
-@mixin flex-box($direction: row, $justify: center, $align: none ) {
+@mixin flex-box($direction: row, $justify: center, $align: none) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -30,7 +30,7 @@
 }
 
 .flex-column {
-  @include flex-box(column);
+  @include flex-box(column, space-between);
 }
 
 .gap {
