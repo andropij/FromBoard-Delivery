@@ -9,7 +9,7 @@
 .flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: none;
 }
 
@@ -196,3 +196,34 @@ header a:active {
 .garants .btn {
   padding: 16px 24px;
 }
+
+/* slayder */
+.slayder {
+  padding: 0 23px;
+}
+
+.slayder-main {
+  gap: 47px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.slayder-main .slayder-main--cards {
+  gap: 24px;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  scrollbar-width: none;
+}
+.slayder-main .slayder-main--cards .slayder-card {
+  scroll-snap-align: center;
+  min-width: 626px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 32px 43px;
+}
+.slayder-main .slayder-main--cards .slayder-card .card-botom {
+  align-items: end;
+}
+
