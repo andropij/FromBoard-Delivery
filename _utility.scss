@@ -1,8 +1,9 @@
 /* Utility */
-@mixin flex-box($direction: row, $justify: center) {
+@mixin flex-box($direction: row, $justify: center, $align: none ) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin gap($size: 4px) {
@@ -18,6 +19,10 @@
   grid-template-columns: $grid-template-columns;
   align-items: $align-items;
   justify-content: $justify;
+}
+
+@mixin margin-top($marging-top: 72px) {
+  margin-top: $marging-top;
 }
 
 .flex {
@@ -69,11 +74,19 @@
 }
 
 .marging-top--big {
-  margin-top: 72px;
+  @include margin-top();
+}
+
+.marging-top--normal {
+  @include margin-top(24px);
 }
 
 .marging-top {
-  margin-top: 12px;
+  @include margin-top(12px);
+}
+
+.marging-top--small {
+  @include margin-top(4px);
 }
 
 /* Fonts */

@@ -112,3 +112,25 @@ header {
     }
   }
 }
+
+/* Garants */
+
+.garants {
+  p {
+    width: 656px;
+
+    justify-self: center;
+
+    line-height: 24px;
+  }
+
+  .garants-selector {
+    @include gap(6px);
+
+    @include flex-box(row, center, start)
+  }
+
+  .btn {
+    padding: 16px 24px;
+  }
+}
