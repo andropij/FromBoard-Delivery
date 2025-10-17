@@ -14,10 +14,11 @@
     />
   </head>
   <body>
+    <div class="blackout"></div>
     <!-- Header. -->
 
     <header>
-      <div class="flex-column big-gap">
+      <div class="main-nav flex-column big-gap">
         <div class="header-top flex">
           <a href="#"><img src="images/Logo.png" alt="" /></a>
           <div class="flex gap">
@@ -43,21 +44,64 @@
           <button class="btn">Оставить заявку</button>
         </div>
       </div>
+      <input type="checkbox" id="menu-toggle" hidden />
+      <nav class="mobile-nav">
+        <div class="flex-column gap">
+          <div class="flex-element flex" id="main-mobile--nav">
+            <a href="#"><img src="images/Logo.png" alt="" /></a>
+            <div class="flex-column" id="nav-sosalovo">
+              <h1 class="text-XXL">+7 (800) 123 45-67</h1>
+              <h2 class="text-XL">Звонки по России бесплатны</h2>
+              <label for="menu-toggle" class="close-btn">
+                <img src="images/close.png" alt="close" />
+              </label>
+            </div>
+          </div>
+          <div class="separator-gr"></div>
+          <div class="flex-element flex">
+            <nav class="flex big-gap">
+              <a href="#" class="text-normal bold">Калькулятор</a>
+              <a href="#" class="text-normal bold">О нас</a>
+              <a href="#" class="text-normal bold">Гарантии</a>
+              <a href="#" class="text-normal bold">Отзывы</a>
+            </nav>
+            <button class="btn">Оставить заявку</button>
+          </div>
+          <div class="separator-gr"></div>
+          <div class="flex-element flex center-text">
+            <p>Доставляем товары из заграницы в Россию</p>
+            <p>Стоимость от 550 рублей за заказ</p>
+            <p>1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-nav--burger flex">
+        <a href="#"><img src="images/logo-smal.png" alt="" /></a>
+        <div class="flex">
+          <h1 class="text-XXL">+7 (800) 123 45-67</h1>
+          <label for="menu-toggle">
+            <img src="images/Burger.png" alt="menu" />
+          </label>
+        </div>
+      </div>
     </header>
     <!-- Hero. -->
 
     <section class="main">
-      <div class="hero marging-top--big big-gap">
+      <div class="hero marging-top--big big-gap grid">
         <div class="grid-element flex-column">
-          <h1 class="text-XXL">
-            Без проблемная доставка купленных вещей из США, Европы и Азии
-            в Россию
-          </h1>
-          <p class="text-standart">
-            Сэкономьте на покупках и наслаждайтесь мировыми брендами —
-            наш сервис позволяет вам легко и удобно заказывать товары со всего
-            мира и получать их в России
-          </p>
+          <div class="grid-element--text flex-column">
+            <h1 class="text-XXL">
+              Без проблемная доставка купленных вещей из США, Европы и Азии
+              в Россию
+            </h1>
+            <p class="text-standart">
+              Сэкономьте на покупках и наслаждайтесь мировыми брендами —
+              наш сервис позволяет вам легко и удобно заказывать товары со всего
+              мира и получать их в России
+            </p>
+          </div>
           <img src="images/Rectangle 2.png" alt="" />
         </div>
 
@@ -92,8 +136,8 @@
 
       <div class="icons">
         <h2 class="center-text marging-top--big">Наши преимущества</h2>
-        <div class="icons-flex flex flex-column">
-          <div class="flex">
+        <div class="icons-flex flex-column">
+          <div class="flex-main flex">
             <div class="flex">
               <img src="images/Board.png" alt="board" />
               <div class="icons-text">
@@ -129,7 +173,7 @@
             </div>
           </div>
 
-          <div class="flex">
+          <div class="flex-main flex">
             <div class="flex">
               <img src="images/best support.png" alt="best support" />
               <div class="icons-text">
@@ -203,7 +247,8 @@
           <div class="garants-selector--element flex flex-column">
             <img src="images/GB.png" alt="" />
             <h3 class="bold marging-top--small">
-              Свидетельство о регистрации в Великобритнии
+              Свидетельство о регистрации в <br />
+              Великобритнии
             </h3>
           </div>
         </div>
@@ -217,9 +262,12 @@
 
       <div class="slayder marging-top--big">
         <h2 class="text-XL bold center-text">Отзывы</h2>
-        <div class="slayder-main flex marging-top">
-          <img src="images/arrow left.png" alt="" />
-          <div class="slayder-main--cards flex">
+        <div class="slider flex marging-top">
+          <input type="radio" name="slider" id="slide1" checked />
+          <input type="radio" name="slider" id="slide2" />
+          <input type="radio" name="slider" id="slide3" />
+
+          <div class="slider-track flex">
             <div class="slayder-card flex-column">
               <h3 class="bold text-XL">
                 Я заказала последний iPhone из США через ваш сервис, и доставка
@@ -309,12 +357,266 @@
               </div>
             </div>
           </div>
-          <img src="images/arrow right.png" alt="" />
+
+          <div class="arrows">
+            <label for="slide3" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide2" class="arrow next">
+              <img
+                src="images/arrow left.png"
+                style="transform: rotate(180deg)"
+                alt="next"
+              />
+            </label>
+
+            <label for="slide1" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide3" class="arrow next">
+              <img
+                src="images/arrow left.png"
+                style="transform: rotate(180deg)"
+                alt="next"
+              />
+            </label>
+
+            <label for="slide2" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide1" class="arrow next">
+              <img
+                src="images/arrow left.png"
+                style="transform: rotate(180deg)"
+                alt="next"
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="slider-oneslide flex marging-top">
+          <input
+            type="radio"
+            name="slider-oneslide"
+            id="slide-oneslide1"
+            checked
+          />
+          <input type="radio" name="slider-oneslide" id="slide-oneslide2" />
+          <input type="radio" name="slider-oneslide" id="slide-oneslide3" />
+          <input type="radio" name="slider-oneslide" id="slide-oneslide4" />
+          <input type="radio" name="slider-oneslide" id="slide-oneslide5" />
+          <input type="radio" name="slider-oneslide" id="slide-oneslide6" />
+          <input type="radio" name="slider-oneslide" id="slide-oneslide7" />
+
+          <div class="slider-track flex">
+            <div class="slayder-card flex-column" id="first">
+              <h3 class="bold text-XL">
+                Я заказала последний iPhone из США через ваш сервис, и доставка
+                прошла быстро и без каких‑либо проблем. Гарантии качества
+                и надёжная упаковка сделали мой опыт покупки невероятно
+                позитивным
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Анна</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+
+            <div class="slayder-card flex-column">
+              <h3 class="bold text-XL">
+                Я уже несколько лет заказываю дизайнерскую одежду из Франции
+                через ваш сервис, и он никогда меня не подводил. Важно иметь
+                надёжную компанию, которая позаботится о вашем заказе
+                и предоставит все необходимые документы для ввоза в Россию
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Алексей</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+
+            <div class="slayder-card flex-column">
+              <h3 class="bold text-XL">
+                Я уже несколько лет заказываю дизайнерскую одежду из Франции
+                через ваш сервис, и он никогда меня не подводил. Важно иметь
+                надежную компанию, которая позаботится о вашем заказе и
+                предоставит все необходимые документы для ввоза в Россию
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Ольга</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+
+            <div class="slayder-card flex-column">
+              <h3 class="bold text-XL">
+                Заказал шикарные часы из Швейцарии, и доставка была невероятно
+                быстрой. Ваш сервис делает интернет-шоппинг более доступным и
+                удобным
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Игорь</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+
+            <div class="slayder-card flex-column">
+              <h3 class="bold text-XL">
+                Ваш сервис действительно изменил мой способ покупок. Я больше не
+                переживаю о таможенных вопросах и документах - все у вас в
+                порядке. Спасибо за ваше качество и надежность
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Екатерина</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+
+            <div class="slayder-card flex-column">
+              <h3 class="bold text-XL">
+                Я заказал редкий антикварный предмет из Японии через ваш сервис,
+                и остался впечатлен. Все пришло в отличном состоянии, и ваша
+                гарантия качества действительно работает. Спасибо за ваше
+                профессиональное обслуживание
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Дмитрий</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+
+            <div class="slayder-card flex-column">
+              <h3 class="bold text-XL">
+                Я заказал редкий антикварный предмет из Японии через ваш сервис,
+                и остался впечатлен. Все пришло в отличном состоянии, и ваша
+                гарантия качества действительно работает. Спасибо за ваше
+                профессиональное обслуживание
+              </h3>
+              <div class="card-botom flex">
+                <p class="text-XL">Дмитрий</p>
+                <img src="images/Quotes.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="arrows">
+            <!-- prev -->
+
+            <label for="slide-oneslide7" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide-oneslide1" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide-oneslide2" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide-oneslide3" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide-oneslide4" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide-oneslide5" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+            <label for="slide-oneslide6" class="arrow prev">
+              <img src="images/arrow left.png" alt="prev" />
+            </label>
+
+            <!-- next -->
+
+            <label for="slide-oneslide2" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+            <label for="slide-oneslide3" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+            <label for="slide-oneslide4" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+            <label for="slide-oneslide5" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+            <label for="slide-oneslide6" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+            <label for="slide-oneslide7" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+            <label for="slide-oneslide1" class="arrow next">
+              <img src="images/arrow right.png" alt="next" />
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ. -->
+
+      <div class="FAQ marging-top--big flex-column">
+        <h2 class="text-XL bold center-text">Остались вопросы?</h2>
+        <div class="grid-element--form flex-column big-gap">
+          <div class="form-element big-gap flex">
+            <input type="text" placeholder="Имя" />
+            <input type="text" placeholder="Почта" />
+          </div>
+          <div class="form-element big-gap flex">
+            <input type="text" placeholder="Телефон" />
+            <input type="text" placeholder="Тема вопроса" />
+          </div>
+          <textarea name="" id="" placeholder="Сообщение..."></textarea>
+          <button class="btn">Оставить заявку</button>
         </div>
       </div>
     </section>
-    
-    <!-- FAQ. -->
 
+    <footer class="marging-top--big">
+      <div class="footer-flex text-white">
+        <div class="flex-column big-gap">
+          <div class="mobile-nav">
+            <nav class="flex gap">
+              <a href="#" class="text-normal text-white">Калькулятор</a>
+              <a href="#" class="text-normal text-white">О нас</a>
+              <a href="#" class="text-normal text-white">Гарантии</a>
+              <a href="#" class="text-normal text-white">Отзывы</a>
+            </nav>
+          </div>
+          <div class="flex">
+            <div class="flex-image flex-column">
+              <img src="images/logo black.png" alt="" />
+              <p>2023 © Ни одно право не защищено, копируйте сколько влезет</p>
+            </div>
+            <nav class="flex big-gap main-nav">
+              <a href="#" class="text-normal text-white">Калькулятор</a>
+              <a href="#" class="text-normal text-white">О нас</a>
+              <a href="#" class="text-normal text-white">Гарантии</a>
+              <a href="#" class="text-normal text-white">Отзывы</a>
+            </nav>
+            <div class="flex-column">
+              <h1 class="text-XXL">+7 (800) 123 45-67</h1>
+              <h2 class="text-XL">Звонки по России бесплатны</h2>
+            </div>
+          </div>
+          <div class="flex-text grid text-gray">
+            <p>
+              НЕ ЯВЛЯЕТСЯ ПУБЛИЧНОЙ ОФЕРТОЙ. Просим обратить внимание на то,
+              что цены носят информационный и ознакомительный характер, а значит
+              ни в какой мере не являются публичной офертой, которая определена
+              в ст. 437 ГК РФ. Вся информация на сайте может содержать
+              неточности, орфографические и иные ошибки, она не является полной,
+              окончательно и исчерпывающей
+            </p>
+            <div class="flex-column">
+              <p>Разработкой макета занимался</p>
+              <p class="sosal">
+                <a href="" class="text-gray">Васильев Александр</a>
+                <span>|</span>
+                <a href="" class="text-gray">Что-то на IT’шном</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
