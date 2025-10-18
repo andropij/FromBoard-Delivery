@@ -132,9 +132,10 @@
 
 .blackout {
   display: none;
-  position: absolute;
+  position: fixed;
+  right: 0;
   width: 100%;
-  height: 100%;
+  height: 1000%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -170,6 +171,7 @@ header a:active {
   color: #8b5cf6;
   border-bottom: 1px dashed #8b5cf6;
 }
+
 /* Hero */
 .hero {
   display: grid;
@@ -205,7 +207,7 @@ header a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-wrap: wrap;
 }
 .icons-flex .flex {
@@ -213,7 +215,7 @@ header a:active {
   gap: 24px;
 }
 .icons-flex .flex .flex {
-  width: 496px;
+  width: auto;
   padding: 24px;
   gap: 12px;
 }
@@ -257,7 +259,7 @@ header a:active {
   /* --- Управление стрелками --- */
 }
 .slider .slider-track {
-  width: 900%; /* 6 слайдов */
+  width: 900%;
   transition: transform 0.6s ease;
   gap: 24px;
 }
@@ -266,7 +268,6 @@ header a:active {
   margin-left: 2%;
 }
 .slider .slider-track .slayder-card {
-  scroll-snap-align: center;
   min-width: 626px;
   background: #fff;
   border-radius: 5px;
@@ -290,13 +291,14 @@ header a:active {
 }
 .slider .arrow {
   pointer-events: all;
-  background: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   width: 50px;
   height: 50px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background 0.3s;
@@ -369,13 +371,14 @@ header a:active {
 }
 .slider-oneslide .arrow {
   pointer-events: all;
-  background: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   width: 50px;
   height: 50px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background 0.3s;
@@ -493,17 +496,31 @@ footer .flex-column .flex-text .flex-column .sosal {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .hero .grid-element {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    grid-auto-flow: row;
+    grid-auto-flow: column;
+    grid-gap: 16px;
+    gap: 16px;
+  }
+  .hero .grid-element .grid-element--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .hero .grid-element .grid-element--text p {
+    font-size: 20px;
   }
   .hero .grid-element img {
-    width: 505px;
+    height: auto;
+    min-width: 30%;
+    max-width: 100%;
   }
   .hero .grid-element--form {
     padding: 24px 210px;
@@ -537,12 +554,15 @@ footer .flex-column .flex-text .flex-column .sosal {
     transform: translateX(-76%);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1350px) {
   header {
     padding: 24px 128px;
   }
   .mobile-nav {
     display: block;
+  }
+  .mobile-nav label {
+    display: none;
   }
   .main-nav {
     display: none;
@@ -559,10 +579,13 @@ footer .flex-column .flex-text .flex-column .sosal {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .hero .grid-element img {
     width: auto;
+  }
+  .hero .grid-element--form {
+    padding: 40px;
   }
   body .main {
     padding: 24px 128px;
@@ -618,17 +641,16 @@ footer .flex-column .flex-text .flex-column .sosal {
     font-size: 20px;
   }
   header {
-    position: relative;
-    padding: 8px 0;
+    position: sticky;
+    padding: 8px 60px;
+    top: 0;
+    z-index: 100;
   }
   header .mobile-nav {
-    padding: 8px 60px;
     display: none;
-    position: fixed;
-    background: hsl(0, 0%, 100%);
-    top: -1px;
-    z-index: 100;
-    overflow-y: auto;
+  }
+  header .mobile-nav label {
+    display: block;
   }
   header .mobile-nav #main-mobile--nav {
     align-items: center;
@@ -654,8 +676,8 @@ footer .flex-column .flex-text .flex-column .sosal {
     align-items: center;
     flex-wrap: wrap;
     padding: 15px 20px;
-    position: relative;
     z-index: 200;
+    position: relative;
   }
   #menu-toggle:checked ~ .mobile-nav {
     display: flex;
@@ -663,12 +685,15 @@ footer .flex-column .flex-text .flex-column .sosal {
   #menu-toggle:checked ~ .mobile-nav--burger {
     display: none;
   }
+  #menu-toggle:checked ~ .blackout {
+    display: block;
+  }
   .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .hero .grid-element {
     display: flex;
