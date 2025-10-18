@@ -14,10 +14,10 @@
     />
   </head>
   <body>
-    <div class="blackout"></div>
     <!-- Header. -->
 
     <header>
+      <input type="checkbox" id="menu-toggle" hidden />
       <div class="main-nav flex-column big-gap">
         <div class="header-top flex">
           <a href="#"><img src="images/Logo.png" alt="" /></a>
@@ -44,7 +44,7 @@
           <button class="btn">Оставить заявку</button>
         </div>
       </div>
-      <input type="checkbox" id="menu-toggle" hidden />
+
       <nav class="mobile-nav">
         <div class="flex-column gap">
           <div class="flex-element flex" id="main-mobile--nav">
@@ -78,13 +78,14 @@
 
       <div class="mobile-nav--burger flex">
         <a href="#"><img src="images/logo-smal.png" alt="" /></a>
-        <div class="flex">
+        <div class="flex gap">
           <h1 class="text-XXL">+7 (800) 123 45-67</h1>
           <label for="menu-toggle">
             <img src="images/Burger.png" alt="menu" />
           </label>
         </div>
       </div>
+      <div class="blackout"></div>
     </header>
     <!-- Hero. -->
 

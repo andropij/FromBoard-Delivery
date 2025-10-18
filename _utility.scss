@@ -19,13 +19,14 @@
 @mixin grid(
   $grid-template-columns: 4fr 1fr,
   $align-items: center,
-  $justify: center
+  $justify: center,
+  $flow: row
 ) {
   display: grid;
   grid-template-columns: $grid-template-columns;
   align-items: $align-items;
   justify-content: $justify;
-  grid-auto-flow: row;
+  grid-auto-flow: $flow;
 }
 
 @mixin margin-top($marging-top: 42px) {
