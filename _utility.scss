@@ -41,6 +41,10 @@
   @include flex-box(column, space-between);
 }
 
+.header-logo {
+  @include flex-box(row, center, center, wrap);
+}
+
 .gap {
   @include gap(2.5px);
 }
