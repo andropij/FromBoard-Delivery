@@ -1,4 +1,6 @@
-@import "utility";
+@use "utility" as *;
+@use "colors" as *;
+@use "fonts";
 
 * {
   padding: 0;
@@ -12,10 +14,18 @@
 
 .mobile-nav {
   display: none;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 
 .mobile-nav--burger {
   display: none;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 
 .blackout {
@@ -28,13 +38,13 @@
   width: 100%;
   height: 1000%;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $black-transparent;
 }
 
 body {
   position: relative;
 
-  background: #e5e7eb;
+  background: $background;
 
   .main {
     padding: 24px 192px;
@@ -46,7 +56,7 @@ body {
 header {
   padding: 24px 192px;
 
-  background: #fff;
+  background: $background-block;
 
   .header-top {
     align-items: center;
@@ -61,16 +71,16 @@ header {
   }
 
   a {
-    color: black;
+    color: $black;
 
     &:hover {
-      color: #8b5cf6;
+      color: $primary-color;
     }
 
     &:active {
-      color: #8b5cf6;
+      color: $primary-color;
 
-      border-bottom: 1px dashed #8b5cf6;
+      border-bottom: 1px dashed $primary-color;
     }
   }
 }
@@ -93,7 +103,7 @@ header {
   .grid-element--form {
     padding: 24px 130px;
 
-    background: #fff;
+    background: $background-block;
 
     border-radius: 5px;
 
@@ -105,7 +115,7 @@ header {
   input {
     flex-grow: 1;
 
-    border: 1px solid #000;
+    border: 1px solid $black;
     border-radius: 2px;
 
     padding: 12px;
@@ -192,7 +202,7 @@ header {
     .slayder-card {
       min-width: 626px;
 
-      background: #fff;
+      background: $background-block;
 
       border-radius: 5px;
 
@@ -230,7 +240,6 @@ header {
     @include flex-box(row, center, center);
 
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     transition: background 0.3s;
   }
 
@@ -280,7 +289,7 @@ header {
 
       min-width: 626px;
 
-      background: #fff;
+      background: $background-block;
 
       border-radius: 5px;
 
@@ -382,7 +391,7 @@ header {
 }
 
 .FAQ {
-  background: #fff;
+  background: $background-block;
 
   border-radius: 5px;
 
@@ -399,7 +408,7 @@ header {
       max-width: 236px;
       min-width: 236px;
 
-      border: 1px solid #000;
+      border: 1px solid $black;
       border-radius: 2px;
 
       padding: 12px;
@@ -409,7 +418,7 @@ header {
       height: 150px;
       width: 497px;
 
-      border: 1px solid #000;
+      border: 1px solid $black;
       border-radius: 2px;
 
       padding: 12px;
@@ -418,9 +427,13 @@ header {
 }
 
 footer {
-  background-color: rgba(17, 24, 39, 1);
+  background-color: $footer;
 
   padding: 40px 192px;
+
+  .flex-image {
+    align-items: start;
+  }
 
   .flex-column {
     .flex {
@@ -673,8 +686,6 @@ footer {
       .flex {
         @include flex-box(row, center, center, wrap);
 
-        padding: 15px 20px;
-
         z-index: 200;
         position: relative;
       }
@@ -690,7 +701,7 @@ footer {
   }
 
   #menu-toggle:checked ~ .blackout {
-    display: block
+    display: block;
   }
 
   .hero {
@@ -751,6 +762,12 @@ footer {
       flex-direction: column;
 
       text-align: center;
+    }
+
+    .flex-image {
+      align-items: center;
+
+      gap: 12px;
     }
   }
 }

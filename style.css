@@ -16,6 +16,14 @@
   flex-wrap: nowrap;
 }
 
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .gap {
   gap: 10px;
 }
@@ -40,7 +48,7 @@
 }
 
 .btn {
-  background: #8b5cf6;
+  background: hsl(263, 70%, 50%);
   color: #fff;
   border-radius: 5px;
   border: none;
@@ -48,7 +56,7 @@
   cursor: pointer;
 }
 .btn:hover {
-  background: hsl(263, 70%, 50%);
+  background: #8b5cf6;
 }
 .btn:active {
   background: hsl(251, 95%, 92%);
@@ -76,7 +84,47 @@
   height: 1px;
 }
 
-/* Fonts */
+input,
+input::placeholder,
+textarea,
+textarea::placeholder,
+.btn,
+img,
+a {
+  transition: ease-in 0.3s;
+}
+
+.grid-element--form input:hover {
+  border: 1px solid #8b5cf6;
+}
+.grid-element--form textarea:hover {
+  border: 1px solid #8b5cf6;
+}
+
+.FAQ .grid-element--form input:hover {
+  border: 1px solid #8b5cf6;
+}
+.FAQ .grid-element--form textarea:hover {
+  border: 1px solid #8b5cf6;
+}
+
+input:hover::placeholder {
+  color: #8b5cf6;
+}
+
+textarea:hover::placeholder {
+  color: #8b5cf6;
+}
+
+textarea {
+  resize: none;
+}
+
+.garants .garants-selector--element:hover > img {
+  align-self: center;
+  transform: scale(1.05);
+}
+
 .text-XXL {
   font-weight: 900;
   font-size: 36px;
@@ -124,9 +172,15 @@
 .mobile-nav {
   display: none;
 }
+.mobile-nav img:hover {
+  cursor: pointer;
+}
 
 .mobile-nav--burger {
   display: none;
+}
+.mobile-nav--burger img:hover {
+  cursor: pointer;
 }
 
 .blackout {
@@ -161,7 +215,7 @@ header .botom-header {
   align-items: center;
 }
 header a {
-  color: black;
+  color: #000;
 }
 header a:hover {
   color: #8b5cf6;
@@ -299,7 +353,6 @@ header a:active {
   align-items: center;
   flex-wrap: nowrap;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background 0.3s;
 }
 .slider #slide1:checked ~ .slider-track {
@@ -457,6 +510,9 @@ header a:active {
 footer {
   background-color: rgb(17, 24, 39);
   padding: 40px 192px;
+}
+footer .flex-image {
+  align-items: start;
 }
 footer .flex-column .flex {
   align-items: center;
@@ -672,7 +728,6 @@ footer .flex-column .flex-text .flex-column .sosal {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 15px 20px;
     z-index: 200;
     position: relative;
   }
@@ -738,5 +793,9 @@ footer .flex-column .flex-text .flex-column .sosal {
   footer .flex:not(nav) {
     flex-direction: column;
     text-align: center;
+  }
+  footer .flex-image {
+    align-items: center;
+    gap: 12px;
   }
 }
