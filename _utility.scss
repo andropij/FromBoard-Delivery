@@ -1,4 +1,7 @@
+@use "colors" as *;
+
 /* Utility */
+
 @mixin flex-box(
   $direction: row,
   $justify: center,
@@ -67,7 +70,7 @@
 }
 
 .btn {
-  background: #8b5cf6;
+  background: hsla(263, 70%, 50%, 1);
   color: #fff;
 
   border-radius: 5px;
@@ -77,7 +80,7 @@
 
   cursor: pointer;
   &:hover {
-    background: hsla(263, 70%, 50%, 1);
+    background: $primary-color;
   }
 
   &:active {
@@ -108,40 +111,54 @@
   height: 1px;
 }
 
-/* Fonts */
-
-.text-XXL {
-  font-weight: 900;
-  font-size: 36px;
+input,
+input::placeholder,
+textarea,
+textarea::placeholder,
+.btn,
+img,
+a {
+  transition: ease-in 0.3s;
 }
 
-.text-XL {
-  font-size: 24px;
-  font-weight: 300;
+.grid-element--form {
+  input:hover {
+    border: 1px solid $primary-color;
+  }
+
+  textarea:hover {
+    border: 1px solid $primary-color;
+  }
 }
 
-.text-normal {
-  font-size: 16px;
-  font-weight: 300;
+.FAQ {
+  .grid-element--form {
+    input:hover {
+      border: 1px solid $primary-color;
+    }
+
+    textarea:hover {
+      border: 1px solid $primary-color;
+    }
+  }
 }
 
-.text-sm {
-  font-size: 14px;
-  font-weight: 300;
+input:hover::placeholder {
+  color: $primary-color;
 }
 
-.bold {
-  font-weight: 700;
+textarea:hover::placeholder {
+  color: $primary-color;
 }
 
-.center-text {
-  text-align: center;
+textarea {
+  resize: none;
 }
 
-.text-white {
-  color: rgba(249, 250, 251, 1);
-}
+.garants {
+  .garants-selector--element:hover > img {
+    align-self: center;
 
-.text-gray {
-  color: rgba(75, 85, 99, 1);
+    transform: scale(1.05);
+  }
 }

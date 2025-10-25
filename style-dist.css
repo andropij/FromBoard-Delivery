@@ -48,7 +48,7 @@
 }
 
 .btn {
-  background: #8b5cf6;
+  background: hsl(263, 70%, 50%);
   color: #fff;
   border-radius: 5px;
   border: none;
@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 .btn:hover {
-  background: hsl(263, 70%, 50%);
+  background: #8b5cf6;
 }
 .btn:active {
   background: hsl(251, 95%, 92%);
@@ -84,7 +84,47 @@
   height: 1px;
 }
 
-/* Fonts */
+input,
+input::placeholder,
+textarea,
+textarea::placeholder,
+.btn,
+img,
+a {
+  transition: ease-in 0.3s;
+}
+
+.grid-element--form input:hover {
+  border: 1px solid #8b5cf6;
+}
+.grid-element--form textarea:hover {
+  border: 1px solid #8b5cf6;
+}
+
+.FAQ .grid-element--form input:hover {
+  border: 1px solid #8b5cf6;
+}
+.FAQ .grid-element--form textarea:hover {
+  border: 1px solid #8b5cf6;
+}
+
+input:hover::placeholder {
+  color: #8b5cf6;
+}
+
+textarea:hover::placeholder {
+  color: #8b5cf6;
+}
+
+textarea {
+  resize: none;
+}
+
+.garants .garants-selector--element:hover > img {
+  align-self: center;
+  transform: scale(1.05);
+}
+
 .text-XXL {
   font-weight: 900;
   font-size: 36px;
@@ -133,9 +173,15 @@
 .mobile-nav {
   display: none;
 }
+.mobile-nav img:hover {
+  cursor: pointer;
+}
 
 .mobile-nav--burger {
   display: none;
+}
+.mobile-nav--burger img:hover {
+  cursor: pointer;
 }
 
 .blackout {

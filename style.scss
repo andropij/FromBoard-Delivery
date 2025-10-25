@@ -1,5 +1,6 @@
-@import "utility";
-@import "colors";
+@use "utility" as *;
+@use "colors" as *;
+@use "fonts";
 
 * {
   padding: 0;
@@ -13,10 +14,18 @@
 
 .mobile-nav {
   display: none;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 
 .mobile-nav--burger {
   display: none;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 
 .blackout {
@@ -676,8 +685,6 @@ footer {
 
       .flex {
         @include flex-box(row, center, center, wrap);
-
-        
 
         z-index: 200;
         position: relative;
